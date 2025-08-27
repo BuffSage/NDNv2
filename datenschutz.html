@@ -1,0 +1,142 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NDN Sanierung</title>
+  <link rel="icon" href="src/assets/images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="src/assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="src/assets/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="src/assets/images/favicon/favicon.svg">
+  <link rel="manifest" href="src/assets/images/favicon/site.webmanifest">
+  <link rel="stylesheet" href="src/styles.css">
+  <script>
+    (function(){
+      try {
+        var storedLang = localStorage.getItem('lang');
+        var lang = storedLang || 'de';
+        document.documentElement.setAttribute('lang', lang);
+      } catch(e) {}
+    })();
+  </script>
+</head>
+<body>
+<header class="app-header">
+  <div class="container navbar">
+    <a href="index.html" class="logo">
+  <img class="logo-img" src="src/assets/images/NDNLongLogo.jpg" alt="NDN Logo">
+  <!-- Removed logo text -->
+    </a>
+    <nav class="desktop-nav">
+      <a data-i18n="nav.services" href="leistungen.html">Leistungen</a>
+      <a data-i18n="nav.about" href="uber-uns.html">Über Uns</a>
+      <a data-i18n="nav.contact" href="kontakt.html">Kontakt</a>
+    </nav>
+    <div class="actions">
+      <button id="langToggle" class="btn" aria-label="Sprache wechseln">DE</button>
+  <!-- Theme toggle removed -->
+      <button class="menu-btn" id="menuBtn" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+      <a data-i18n="nav.services" href="leistungen.html">Leistungen</a>
+      <a data-i18n="nav.about" href="uber-uns.html">Über Uns</a>
+      <a data-i18n="nav.contact" href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+<main class="page">
+
+<section class="container">
+    <div class="content-header">
+      <h1 data-i18n="footer.privacy">Datenschutz</h1>
+      <hr class="red-line">
+    </div>
+    
+    <p><strong>Verantwortlicher für die Datenverarbeitung:</strong><br>
+    NDN Sanierung<br>
+    Endertstraße 31<br>
+    56812 Cochem<br>
+    Telefon: +49 155 62360499<br>
+    E-Mail: info@ndn-sanierung.de</p>
+
+    <h2>1. Grundsätzliche Informationen</h2>
+    <p>Wir nehmen den Schutz Ihrer persönlichen Daten sehr ernst und behandeln Ihre personenbezogenen Daten vertraulich und entsprechend den gesetzlichen Datenschutzvorschriften sowie dieser Datenschutzerklärung.</p>
+    <p>Diese Datenschutzerklärung klärt Sie über die Art, den Umfang und Zweck der Verarbeitung von personenbezogenen Daten auf unserer Webseite auf. Rechtsgrundlage ist die Datenschutz-Grundverordnung (DSGVO).</p>
+
+    <h2>2. Datenerhebung bei Webseitenbesuch</h2>
+    <p>Bei jedem Aufruf unserer Internetseite erfasst unser System automatisiert Daten und Informationen vom Computersystem des aufrufenden Rechners. Folgende Daten werden erhoben:</p>
+    <ul>
+      <li>Informationen über den Browsertyp und die verwendete Version</li>
+      <li>Das Betriebssystem des Nutzers</li>
+      <li>Die IP-Adresse des Nutzers</li>
+      <li>Datum und Uhrzeit des Zugriffs</li>
+      <li>Websites, von denen das System des Nutzers auf unsere Internetseite gelangt</li>
+    </ul>
+    <p>Diese Daten werden in den Logfiles unseres Systems gespeichert. Eine Speicherung dieser Daten zusammen mit anderen personenbezogenen Daten findet nicht statt. Rechtsgrundlage ist Art. 6 Abs. 1 lit. f DSGVO.</p>
+
+    <h2>3. Kontaktformular und E-Mail-Kontakt</h2>
+    <p>Sind Sie bei uns durch Kontaktformular oder E-Mail in Kontakt getreten, werden die von Ihnen gemachten Angaben zum Zwecke der Bearbeitung der Anfrage und für den Fall von Anschlussfragen bei uns gespeichert. Diese Daten geben wir nicht ohne Ihre Einwilligung weiter.</p>
+    <p>Die Verarbeitung der in das Kontaktformular eingegebenen Daten erfolgt somit ausschließlich auf Grundlage Ihrer Einwilligung (Art. 6 Abs. 1 lit. a DSGVO). Sie können diese Einwilligung jederzeit widerrufen.</p>
+
+    <h2>4. Cookies</h2>
+    <p>Unsere Website verwendet Cookies. Das sind kleine Textdateien, die Ihr Webbrowser auf Ihrem Endgerät speichert. Cookies helfen uns dabei, unser Angebot nutzerfreundlicher, effektiver und sicherer zu machen.</p>
+    <p>Einige Cookies sind "Session-Cookies." Solche Cookies werden nach Ende Ihrer Browser-Sitzung von selbst gelöscht. Hingegen bleiben andere Cookies auf Ihrem Endgerät bestehen, bis Sie diese selbst löschen. Solche Cookies helfen uns, Sie bei Rückkehr auf unsere Website wiederzuerkennen.</p>
+    <p>Mit einem modernen Webbrowser können Sie das Setzen von Cookies überwachen, einschränken oder unterbinden. Viele Webbrowser lassen sich so konfigurieren, dass Cookies automatisch gelöscht werden, wenn das Programm geschlossen wird.</p>
+
+    <h2>5. Ihre Rechte</h2>
+    <p>Sie haben gegenüber uns folgende Rechte hinsichtlich der Sie betreffenden personenbezogenen Daten:</p>
+    <ul>
+      <li><strong>Recht auf Auskunft</strong> über die zu Ihrer Person gespeicherten Daten</li>
+      <li><strong>Recht auf Berichtigung</strong> unrichtiger oder unvollständiger Daten</li>
+      <li><strong>Recht auf Löschung</strong> („Recht auf Vergessenwerden")</li>
+      <li><strong>Recht auf Einschränkung der Verarbeitung</strong></li>
+      <li><strong>Recht auf Datenübertragbarkeit</strong></li>
+      <li><strong>Widerspruchsrecht</strong> gegen die Verarbeitung</li>
+    </ul>
+    <p>Wenn Sie der Ansicht sind, dass die Verarbeitung Ihrer personenbezogenen Daten gegen das Datenschutzrecht verstößt, haben Sie das Recht, sich bei einer Datenschutz-Aufsichtsbehörde Ihrer Wahl zu beschweren.</p>
+
+    <h2>6. SSL- bzw. TLS-Verschlüsselung</h2>
+    <p>Diese Seite nutzt aus Sicherheitsgründen und zum Schutz der Übertragung vertraulicher Inhalte eine SSL-bzw. TLS-Verschlüsselung. Eine verschlüsselte Verbindung erkennen Sie daran, dass die Adresszeile des Browsers von "http://" auf "https://" wechselt und an dem Schloss-Symbol in Ihrer Browserzeile.</p>
+    <p>Wenn die SSL- bzw. TLS-Verschlüsselung aktiviert ist, können die Daten, die Sie an uns übermitteln, nicht von Dritten mitgelesen werden.</p>
+
+    <h2>7. Speicherdauer</h2>
+    <p>Personenbezogene Daten werden nur so lange gespeichert, wie es für den jeweiligen Zweck erforderlich ist oder gesetzliche Aufbewahrungsfristen bestehen. Nach Wegfall des jeweiligen Zweckes oder Ablauf gesetzlicher Fristen werden die entsprechenden Daten routinemäßig und entsprechend den gesetzlichen Vorschriften gelöscht.</p>
+
+    <h2>8. Änderungen der Datenschutzerklärung</h2>
+    <p>Wir behalten uns vor, diese Datenschutzerklärung anzupassen, damit sie stets den aktuellen rechtlichen Anforderungen entspricht oder um Änderungen unserer Leistungen in der Datenschutzerklärung umzusetzen. Für Ihren erneuten Besuch gilt dann die neue Datenschutzerklärung.</p>
+
+    <p><em>Stand: August 2025</em></p>
+  </section>
+
+</main>
+<footer class="app-footer reveal">
+  <div class="container footer-grid">
+    <div>
+      <h4 data-i18n="footer.nav_title">Navigation</h4>
+      <ul>
+        <li><a data-i18n="nav.services" href="leistungen.html">Leistungen</a></li>
+        <li><a data-i18n="nav.about" href="uber-uns.html">Über Uns</a></li>
+        <li><a data-i18n="nav.contact" href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 data-i18n="footer.contact_title">Kontakt</h4>
+      <p>Telefon: <a href="tel:+4915562360499">+49 155 62360499</a></p>
+      <p>E-Mail: <a href="mailto:info@ndn-sanierung.de">info@ndn-sanierung.de</a></p>
+      <p>Adresse: <span class="address">Endertstraße 31, 56812 Cochem</span></p>
+    </div>
+    <div>
+      <h4 data-i18n="footer.legal_title">Rechtliches</h4>
+      <ul>
+        <li><a data-i18n="footer.imprint" href="impressum.html">Impressum</a></li>
+        <li><a data-i18n="footer.privacy" href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container rights" data-i18n="footer.rights">© 2024 NDN Sanierung. Alle Rechte vorbehalten.</div>
+</footer>
+<script src="src/js/main.js"></script>
+</body>
+</html>

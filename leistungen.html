@@ -1,0 +1,127 @@
+<!doctype html>
+<html lang="de">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>NDN Sanierung – Leistungen</title>
+  <link rel="icon" href="src/assets/images/favicon/favicon.ico" type="image/x-icon">
+  <link rel="apple-touch-icon" sizes="180x180" href="src/assets/images/favicon/apple-touch-icon.png">
+  <link rel="icon" type="image/png" sizes="96x96" href="src/assets/images/favicon/favicon-96x96.png">
+  <link rel="icon" type="image/svg+xml" href="src/assets/images/favicon/favicon.svg">
+  <link rel="manifest" href="src/assets/images/favicon/site.webmanifest">
+  <link rel="stylesheet" href="src/styles.css">
+  <script>
+    (function(){
+      try {
+        var storedLang = localStorage.getItem('lang');
+        var lang = storedLang || 'de';
+        document.documentElement.setAttribute('lang', lang);
+      } catch(e) {}
+    })();
+  </script>
+</head>
+<body>
+<header class="app-header">
+  <div class="container navbar">
+    <a href="index.html" class="logo">
+  <img class="logo-img" src="src/assets/images/NDNLongLogo.jpg" alt="NDN Logo">
+  <!-- Removed logo text -->
+    </a>
+    <nav class="desktop-nav">
+      <a data-i18n="nav.services" href="leistungen.html">Leistungen</a>
+      <a data-i18n="nav.about" href="uber-uns.html">Über Uns</a>
+      <a data-i18n="nav.contact" href="kontakt.html">Kontakt</a>
+    </nav>
+    <div class="actions">
+      <button id="langToggle" class="btn" aria-label="Sprache wechseln">DE</button>
+  <!-- Theme toggle removed -->
+      <button class="menu-btn" id="menuBtn" aria-label="Menü">
+        <span></span><span></span><span></span>
+      </button>
+    </div>
+  </div>
+  <nav class="mobile-nav" id="mobileNav">
+      <a data-i18n="nav.services" href="leistungen.html">Leistungen</a>
+      <a data-i18n="nav.about" href="uber-uns.html">Über Uns</a>
+      <a data-i18n="nav.contact" href="kontakt.html">Kontakt</a>
+  </nav>
+</header>
+
+<main class="page center-page">
+  <section class="container">
+
+    <!-- PAGE TITLE -->
+    <div class="content-header services-header">
+      <h1 class="services-title" data-i18n="leistungen.title">Unsere Fachleistungen im Detail</h1>
+      <hr class="title-uline">
+    </div>
+
+    <!-- ASBEST SECTION -->
+    <div class="service-section reveal" data-service="asbestos">
+      <h2 data-i18n="leistungen.asbestos.title">Asbestsanierung nach TRGS 519</h2>
+      <hr class="title-uline">
+      <p data-i18n="leistungen.asbestos.text">
+        Asbest ist eine ernstzunehmende Gefahr für die Gesundheit. Wir sanieren fachgerecht und zertifiziert. Wir entfernen u.a.:
+      </p>
+      <ul>
+        <li data-i18n="leistungen.asbestos.item1">Asbestzementplatten (Eternit) an Dächern und Fassaden</li>
+        <li data-i18n="leistungen.asbestos.item2">Asbesthaltige Rohre, Lüftungskanäle und Formteile</li>
+        <li data-i18n="leistungen.asbestos.item3">Floor-Flex-Platten und asbesthaltige Kleber</li>
+        <li data-i18n="leistungen.asbestos.item4">Brandschutzverkleidungen, Dichtmassen & Spritzasbest</li>
+      </ul>
+      <p data-i18n="leistungen.asbestos.outro">
+        Wir arbeiten staubarm, sicher und nach Vorschrift – inklusive Entsorgung und Dokumentation.
+      </p>
+    </div>
+
+    <!-- KMF / POLLUTANTS SECTION -->
+    <div class="service-section reveal" data-service="kmf">
+      <h2 data-i18n="leistungen.kmf.title">KMF &amp; Schadstoffe</h2>
+      <hr class="title-uline">
+      <p data-i18n="leistungen.kmf.text">
+        Künstliche Mineralfasern und weitere Schadstoffe erfordern fachgerechte Sanierung. Unser Expertenteam entfernt:
+      </p>
+      <ul>
+        <li data-i18n="leistungen.kmf.item1">KMF (Künstliche Mineralfasern) – Glaswolle, Steinwolle, Schlackenwolle</li>
+        <li data-i18n="leistungen.kmf.item2">PCB (Polychlorierte Biphenyle) in Fugenmassen und Anstrichen</li>
+        <li data-i18n="leistungen.kmf.item3">PAK (Polyzyklische aromatische Kohlenwasserstoffe) in Teerkleber</li>
+        <li data-i18n="leistungen.kmf.item4">Holzschutzmittel wie PCP, Lindan und DDT</li>
+      </ul>
+      <p data-i18n="leistungen.kmf.outro">
+        Alle Arbeiten erfolgen nach aktuellen Richtlinien mit entsprechender Schutzausrüstung und ordnungsgemäßer Entsorgung.
+      </p>
+    </div>
+
+  </section>
+</main>
+
+<footer class="app-footer reveal">
+  <div class="container footer-grid">
+    <div>
+      <h4 data-i18n="footer.nav_title">Navigation</h4>
+      <ul>
+        <li><a data-i18n="nav.services" href="leistungen.html">Leistungen</a></li>
+        <li><a data-i18n="nav.about" href="uber-uns.html">Über Uns</a></li>
+        <li><a data-i18n="nav.contact" href="kontakt.html">Kontakt</a></li>
+      </ul>
+    </div>
+    <div>
+      <h4 data-i18n="footer.contact_title">Kontakt</h4>
+      <p>Telefon: <a href="tel:+4915562360499">+49 155 62360499</a></p>
+      <p>E-Mail: <a href="mailto:info@ndn-sanierung.de">info@ndn-sanierung.de</a></p>
+      <p>Adresse: <span class="address">Endertstraße 31, 56812 Cochem</span></p>
+    </div>
+    <div>
+      <h4 data-i18n="footer.legal_title">Rechtliches</h4>
+      <ul>
+        <li><a data-i18n="footer.imprint" href="impressum.html">Impressum</a></li>
+        <li><a data-i18n="footer.privacy" href="datenschutz.html">Datenschutz</a></li>
+      </ul>
+    </div>
+  </div>
+  <div class="container rights" data-i18n="footer.rights">© 2025 NDN Sanierung. Alle Rechte vorbehalten.</div>
+</footer>
+
+<script src="src/js/main.js"></script>
+</body>
+</html>
