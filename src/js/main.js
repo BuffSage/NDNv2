@@ -1,4 +1,4 @@
-(function () {
+;(function () {
   'use strict';
 
   // -----------------------------
@@ -175,8 +175,9 @@
     const base = dict.footer?.rights || '';
     const developerCredit = dict.footer?.developed_by || '';
     
-    // Create the base copyright text
-    const copyrightText = `© ${new Date().getFullYear()} ${String(base).replace(/^©\s*/, '').trim()}. `;
+    // Create the base copyright text (remove any existing © and year, but keep the original ending punctuation)
+    const baseText = String(base).replace(/^©\s*\d{4}\s*/, '').trim();
+    const copyrightText = `© ${new Date().getFullYear()} ${baseText} `;
     
     // Create the developer credit with clickable link
     const isGerman = lang === 'de';
@@ -230,9 +231,27 @@
       localStorage.setItem('lang', lang);
     } catch (_) {}
     applyLang(lang);
+    updateLangToggleButton(lang);
+  }
+  
+  function updateLangToggleButton(lang) {
     const langBtn = $('#langToggle');
-    // Show the opposite language (what clicking will switch to)
-    if (langBtn) langBtn.textContent = lang === 'de' ? 'EN' : 'DE';
+    if (!langBtn) return;
+    
+    // Show current language clearly
+    if (lang === 'de') {
+      langBtn.textContent = 'DE';
+      langBtn.setAttribute('aria-label', 'Switch to English');
+      langBtn.title = 'Currently German - Click for English';
+    } else {
+      langBtn.textContent = 'EN';
+      langBtn.setAttribute('aria-label', 'Auf Deutsch wechseln');
+      langBtn.title = 'Currently English - Click for German';
+    }
+    
+    // Add visual indication of current language
+    langBtn.classList.remove('lang-de', 'lang-en');
+    langBtn.classList.add(`lang-${lang}`);
   }
 
   // -----------------------------
@@ -243,44 +262,53 @@
   function initLangToggle() {
     const langBtn = $('#langToggle');
     if (!langBtn) return;
+    
     langBtn.addEventListener('click', () => {
       const currentLangCode = currentLang();
       const targetLang = currentLangCode === 'de' ? 'en' : 'de';
       
-      // Get the current page filename
+      // Get current path info
       const currentPath = window.location.pathname;
-      const currentFile = currentPath.split('/').pop() || 'index.html';
-      
-      // Determine if we're currently in the EN folder
       const isInEnFolder = currentPath.includes('/en/');
+      
+      // Get the filename
+      const pathParts = currentPath.split('/');
+      let filename = pathParts[pathParts.length - 1];
+      if (!filename || filename === '') {
+        filename = 'index.html';
+      }
       
       let targetUrl;
       
       if (targetLang === 'en') {
-        // Switching to English - redirect to en/ folder
+        // Switching to English
         if (isInEnFolder) {
-          // Already in EN folder, just update language
+          // Already in EN folder, just update state
           setLang('en');
           return;
         } else {
-          // Redirect to EN version
-          targetUrl = `en/${currentFile}`;
+          // Need to go to EN folder
+          targetUrl = './en/' + filename;
         }
       } else {
-        // Switching to German - redirect to root
+        // Switching to German
         if (isInEnFolder) {
-          // Currently in EN folder, go to root
-          targetUrl = `../${currentFile}`;
+          // In EN folder, need to go back to root
+          targetUrl = '../' + filename;
         } else {
-          // Already in root, just update language
+          // Already in root, just update state
           setLang('de');
           return;
         }
       }
       
-      // Redirect to the appropriate language version
+      // Navigate to target URL
+      console.log('Navigating to:', targetUrl);
       window.location.href = targetUrl;
     });
+    
+    // Initialize button display
+    updateLangToggleButton(currentLang());
   }
 
   function initMenuToggle() {

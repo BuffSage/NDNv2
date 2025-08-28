@@ -13,9 +13,10 @@
   <script>
     (function(){
       try {
-        var storedLang = localStorage.getItem('lang');
-        var lang = storedLang || 'de';
+        // For German pages, set language to DE
+        var lang = 'de';
         document.documentElement.setAttribute('lang', lang);
+        localStorage.setItem('lang', lang);
       } catch(e) {}
     })();
   </script>
@@ -33,7 +34,7 @@
       <a data-i18n="nav.contact" href="kontakt.html">Kontakt</a>
     </nav>
     <div class="actions">
-      <button id="langToggle" class="btn" aria-label="Sprache wechseln">DE</button>
+      <button id="langToggle" class="btn" aria-label="Switch to English">DE</button>
   <!-- Theme toggle removed -->
       <button class="menu-btn" id="menuBtn" aria-label="Menü">
         <span></span><span></span><span></span>
@@ -50,14 +51,16 @@
 
 <section class="hero header-hero">
   <div class="container hero-inner">
-  <h1 style="font-size:3.2rem;">NDN Sanierung</h1>
-    <p data-i18n="home.tagline" style="line-height:1.3;">
-      <span style="display:block;">Asbest- und Schadstoffsanierung mit Zertifizierung (TRGS 519)</span>
-      <span style="display:block;font-weight:600;margin-top:8px;">Sicher. Schnell. Fachgerecht.</span>
-    </p>
+    <div class="hero-content">
+      <h1 style="font-size:3.6rem;margin-bottom:12px;">NDN Sanierung</h1>
+      <p style="line-height:1.4;margin-bottom:32px;">
+        <span style="display:block;font-size:1.15rem;">Asbest- und Schadstoffsanierung mit Zertifizierung (TRGS 519).</span>
+        <span style="display:block;font-size:1.15rem;">Sicher. Schnell. Fachgerecht.</span>
+      </p>
+    </div>
     <div class="hero-cta">
-  <a class="btn primary" href="leistungen.html" data-i18n="home.cta_services">Zu den Leistungen</a>
-  <a class="btn secondary" href="kontakt.html" data-i18n="home.cta_contact">Kontakt aufnehmen</a>
+      <a class="btn primary" href="leistungen.html" data-i18n="home.cta_services">Zu den Leistungen</a>
+      <a class="btn secondary" href="kontakt.html" data-i18n="home.cta_contact">Kontakt aufnehmen</a>
     </div>
   </div>
 </section>

@@ -13,9 +13,10 @@
   <script>
     (function(){
       try {
-        var storedLang = localStorage.getItem('lang');
-        var lang = storedLang || 'de';
+        // For EN folder pages, set language to EN
+        var lang = 'en';
         document.documentElement.setAttribute('lang', lang);
+        localStorage.setItem('lang', lang);
       } catch(e) {}
     })();
   </script>
@@ -33,7 +34,7 @@
       <a data-i18n="nav.contact" href="kontakt.html">Kontakt</a>
     </nav>
     <div class="actions">
-      <button id="langToggle" class="btn" aria-label="Sprache wechseln">DE</button>
+      <button id="langToggle" class="btn" aria-label="Switch to German">EN</button>
   <!-- Theme toggle removed -->
       <button class="menu-btn" id="menuBtn" aria-label="Menü">
         <span></span><span></span><span></span>
@@ -50,11 +51,13 @@
 
 <section class="hero header-hero">
   <div class="container hero-inner">
-    <h1>NDN Sanierung</h1>
-    <p data-i18n="home.tagline">Asbest- und Schadstoffsanierung mit Zertifizierung (TRGS 519). Sicher. Schnell. Fachgerecht.</p>
+    <div class="hero-content">
+      <h1 style="font-size:3.6rem;margin-bottom:12px;">NDN Sanierung</h1>
+      <p style="line-height:1.4;margin-bottom:32px;">Certified asbestos and hazardous material remediation (TRGS 519). Safe. Fast. Professional.</p>
+    </div>
     <div class="hero-cta">
-      <a class="btn primary" href="leistungen.html" data-i18n="home.cta_services">Zu den Leistungen</a>
-      <a class="btn secondary" href="kontakt.html" data-i18n="home.cta_contact">Kontakt aufnehmen</a>
+      <a class="btn primary" href="leistungen.html" data-i18n="home.cta_services">View Services</a>
+      <a class="btn secondary" href="kontakt.html" data-i18n="home.cta_contact">Contact Us</a>
     </div>
   </div>
 </section>
