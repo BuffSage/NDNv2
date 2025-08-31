@@ -35,7 +35,6 @@
       <a data-i18n="nav.contact" href="kontakt.html">Kontakt</a>
     </nav>
     <div class="actions">
-      <button id="langToggle" class="btn" aria-label="Switch to English">DE</button>
   <!-- Theme toggle removed -->
       <button class="menu-btn" id="menuBtn" aria-label="Menü">
         <span></span><span></span><span></span>
@@ -62,7 +61,7 @@
     <div class="floating-shape shape-8"></div>
   </div>
   <div class="container hero-content">
-    <h1 class="hero-main-title">Professionelle Asbest- und Schadstoffsanierung</h1>
+    <h1 class="hero-main-title">NDN Sanierung</h1>
     <p class="hero-tagline hero-tagline-large">
       <span>Zertifiziert • Sicher • Zuverlässig</span>
     </p>
@@ -76,13 +75,13 @@
 <!-- "Warum NDN Sanierung?" Section -->
 <section class="why-ndn-section">
   <div class="container">
-    <div class="content-header">
+    <div class="content-header" style="margin-bottom:48px;">
       <h2 class="why-ndn-title">
         Warum <span class="animated-underline">NDN Sanierung</span>?
       </h2>
     </div>
     
-    <div class="why-ndn-content">
+    <div class="why-ndn-content" id="whyNdnContentDe">
       <div class="horizontal-card">
         <div class="card-icon">
           <i class="fas fa-shield-alt"></i>
@@ -119,6 +118,7 @@
 
 <section class="services-overview">
   <div class="container">
+    <h2 class="services-title">Unsere Leistungen</h2>
     <div class="services-grid">
       <div class="service-item">
         <div class="service-icon">
@@ -140,18 +140,17 @@
 
 <section class="container map-section">
   <div class="content-header">
-    <h2 data-i18n="home.map_title">Anfahrt & Karte</h2>
+    <h2>Unser Standort</h2>
     <hr class="title-uline">
   </div>
-    <div class="map-wrap">
-  <iframe id="mapEmbed"
-    title="NDN Sanierung Karte"
-    loading="lazy"
-    referrerpolicy="no-referrer-when-downgrade"
-    src="https://www.google.com/maps?q=Endertstra%C3%9Fe%2031,%2056812%20Cochem%20DE&output=embed">
-  </iframe>
-</div>
-
+  <div class="map-wrap">
+    <iframe id="mapEmbed"
+      title="NDN Sanierung Karte"
+      loading="lazy"
+      referrerpolicy="no-referrer-when-downgrade"
+      src="https://www.google.com/maps?q=Endertstra%C3%9Fe%2031,%2056812%20Cochem%20DE&output=embed">
+    </iframe>
+  </div>
 </section>
 
 </main>
@@ -163,6 +162,7 @@
         <li><a data-i18n="nav.services" href="leistungen.html">Leistungen</a></li>
         <li><a data-i18n="nav.about" href="uber-uns.html">Über Uns</a></li>
         <li><a data-i18n="nav.contact" href="kontakt.html">Kontakt</a></li>
+        <li class="footer-lang-item"><a id="langToggle" href="en/index.html" aria-label="Switch language">DE/EN</a></li>
       </ul>
     </div>
     <div>
@@ -180,7 +180,16 @@
     </div>
   </div>
   <div class="container rights" data-i18n="footer.rights">© 2024 NDN Sanierung. Alle Rechte vorbehalten.</div>
+  <p>Entwickelt von Yondev.com.</p>
 </footer>
 <script src="src/js/main.js"></script>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var whyNdnContent = document.getElementById('whyNdnContentDe');
+  if (whyNdnContent) {
+    whyNdnContent.style.marginTop = '64px';
+  }
+});
+</script>
 </body>
 </html>
