@@ -237,85 +237,91 @@
       localStorage.setItem('lang', lang);
     } catch (_) {}
     applyLang(lang);
-    updateLangToggleButton(lang);
+    // updateLangToggleButton(lang); // Disabled language toggle JS to always show 'DE/EN' as static text in the footer
   }
   
-  function updateLangToggleButton(lang) {
-    const langBtn = $('#langToggle');
-    if (!langBtn) return;
+  // Disabled language toggle JS to always show 'DE/EN' as static text in the footer
+  // function updateLangToggleButton(lang) {
+  //   // Disabled for main homepage to allow manual HTML content
+  //   if (window.location.pathname.endsWith('/index.html') || window.location.pathname === '/' || window.location.pathname.match(/NDNSanierung\\index\.html$/)) {
+  //     return;
+  //   }
+  //   const langBtn = $('#langToggle');
+  //   if (!langBtn) return;
     
-    // Show current language clearly
-    if (lang === 'de') {
-      langBtn.textContent = 'DE';
-      langBtn.setAttribute('aria-label', 'Switch to English');
-      langBtn.title = 'Currently German - Click for English';
-    } else {
-      langBtn.textContent = 'EN';
-      langBtn.setAttribute('aria-label', 'Auf Deutsch wechseln');
-      langBtn.title = 'Currently English - Click for German';
-    }
+  //   // Show current language clearly
+  //   if (lang === 'de') {
+  //     langBtn.textContent = 'DE';
+  //     langBtn.setAttribute('aria-label', 'Switch to English');
+  //     langBtn.title = 'Currently German - Click for English';
+  //   } else {
+  //     langBtn.textContent = 'EN';
+  //     langBtn.setAttribute('aria-label', 'Auf Deutsch wechseln');
+  //     langBtn.title = 'Currently English - Click for German';
+  //   }
     
-    // Add visual indication of current language
-    langBtn.classList.remove('lang-de', 'lang-en');
-    langBtn.classList.add(`lang-${lang}`);
-  }
+  //   // Add visual indication of current language
+  //   langBtn.classList.remove('lang-de', 'lang-en');
+  //   langBtn.classList.add(`lang-${lang}`);
+  // }
 
   // -----------------------------
   // Init blocks
   // -----------------------------
   // Theme toggle removed
 
-  function initLangToggle() {
-    const langBtn = $('#langToggle');
-    if (!langBtn) return;
+  // Disabled language toggle JS to always show 'DE/EN' as static text in the footer
+  // function initLangToggle() {
+  //   const langBtn = $('#langToggle');
+  //   if (!langBtn) return;
     
-    langBtn.addEventListener('click', () => {
-      const currentLangCode = currentLang();
-      const targetLang = currentLangCode === 'de' ? 'en' : 'de';
+  //   langBtn.addEventListener('click', () => {
+  //     const currentLangCode = currentLang();
+  //     const targetLang = currentLangCode === 'de' ? 'en' : 'de';
       
-      // Get current path info
-      const currentPath = window.location.pathname;
-      const isInEnFolder = currentPath.includes('/en/');
+  //     // Get current path info
+  //     const currentPath = window.location.pathname;
+  //     const isInEnFolder = currentPath.includes('/en/');
       
-      // Get the filename
-      const pathParts = currentPath.split('/');
-      let filename = pathParts[pathParts.length - 1];
-      if (!filename || filename === '') {
-        filename = 'index.html';
-      }
+  //     // Get the filename
+  //     const pathParts = currentPath.split('/');
+  //     let filename = pathParts[pathParts.length - 1];
+  //     if (!filename || filename === '') {
+  //       filename = 'index.html';
+  //     }
       
-      let targetUrl;
+  //     let targetUrl;
       
-      if (targetLang === 'en') {
-        // Switching to English
-        if (isInEnFolder) {
-          // Already in EN folder, just update state
-          setLang('en');
-          return;
-        } else {
-          // Need to go to EN folder
-          targetUrl = './en/' + filename;
-        }
-      } else {
-        // Switching to German
-        if (isInEnFolder) {
-          // In EN folder, need to go back to root
-          targetUrl = '../' + filename;
-        } else {
-          // Already in root, just update state
-          setLang('de');
-          return;
-        }
-      }
+  //     if (targetLang === 'en') {
+  //       // Switching to English
+  //       if (isInEnFolder) {
+  //         // Already in EN folder, just update state
+  //         setLang('en');
+  //         return;
+  //       } else {
+  //         // Need to go to EN folder
+  //         targetUrl = './en/' + filename;
+  //       }
+  //     } else {
+  //       // Switching to German
+  //       if (isInEnFolder) {
+  //         // In EN folder, need to go back to root
+  //         targetUrl = '../' + filename;
+  //       } else {
+  //         // Already in root, just update state
+  //         setLang('de');
+  //         return;
+  //       }
+  //     }
       
-      // Navigate to target URL
-      console.log('Navigating to:', targetUrl);
-      window.location.href = targetUrl;
-    });
+  //     // Navigate to target URL
+  //     console.log('Navigating to:', targetUrl);
+  //     window.location.href = targetUrl;
+  //   });
     
-    // Initialize button display
-    updateLangToggleButton(currentLang());
-  }
+  //   // Initialize button display
+  //   updateLangToggleButton(currentLang());
+  // }
 
   function initMenuToggle() {
     const menuBtn = $('#menuBtn');
@@ -550,7 +556,8 @@
     setLang(currentLang());
 
   // header interactions
-  initLangToggle();
+  // Disabled language toggle JS to always show 'DE/EN' as static text in the footer
+  // initLangToggle();
       initMenuToggle();
       initCookieConsent();
       initCardAnimations();

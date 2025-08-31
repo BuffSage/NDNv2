@@ -32,10 +32,9 @@
     <nav class="desktop-nav">
       <a data-i18n="nav.services" href="leistungen.html">Leistungen</a>
       <a data-i18n="nav.about" href="uber-uns.html">Über Uns</a>
-      <a data-i18n="nav.contact" href="kontakt.html">Kontakt</a>
+      <a data-i18n="nav.contact" href="kontakt.html">Contact</a>
     </nav>
     <div class="actions">
-      <button id="langToggle" class="btn" aria-label="Switch to German">EN</button>
   <!-- Theme toggle removed -->
       <button class="menu-btn" id="menuBtn" aria-label="Menü">
         <span></span><span></span><span></span>
@@ -74,41 +73,60 @@
   </div>
 </section>
 
-<section class="container features">
-  <div class="horizontal-card">
-    <div class="card-icon">
-      <i class="fas fa-shield-alt"></i>
+<!-- Why NDN Sanierung? Section (merged with cards) -->
+<section class="why-ndn-section">
+  <div class="container">
+    <div class="content-header" style="margin-bottom:8px;">
+      <h2 class="why-ndn-title">
+        Why <span class="animated-underline">NDN Sanierung</span>?
+      </h2>
     </div>
-    <div class="card-content">
-      <h3>TRGS 519</h3>
-      <hr class="title-uline">
-      <p data-i18n="home.point1">Asbestos remediation according to TRGS 519. We handle planning, execution and disposal.</p>
-    </div>
-  </div>
-  <div class="horizontal-card">
-    <div class="card-icon">
-      <i class="fas fa-clock"></i>
-    </div>
-    <div class="card-content">
-      <h3 data-i18n="home.point2_title">Quick on Site</h3>
-      <hr class="title-uline">
-      <p data-i18n="home.point2">Flexible scheduling. Our team is ready at short notice.</p>
-    </div>
-  </div>
-  <div class="horizontal-card">
-    <div class="card-icon">
-      <i class="fas fa-award"></i>
-    </div>
-    <div class="card-content">
-      <h3 data-i18n="home.point3_title">Experience</h3>
-      <hr class="title-uline">
-      <p data-i18n="home.point3">Qualified specialists. Benefit from years of hands-on experience.</p>
+    <div class="why-ndn-content" id="whyNdnContentEn">
+      <div class="horizontal-card">
+        <div class="card-icon">
+          <i class="fas fa-shield-alt"></i>
+        </div>
+        <div class="card-content">
+          <h3>TRGS 519</h3>
+          <hr class="title-uline">
+          <p data-i18n="home.point1">Asbestos remediation according to TRGS 519. We handle planning, execution and disposal.</p>
+        </div>
+      </div>
+      <div class="horizontal-card">
+        <div class="card-icon">
+          <i class="fas fa-clock"></i>
+        </div>
+        <div class="card-content">
+          <h3 data-i18n="home.point2_title">Quick on Site</h3>
+          <hr class="title-uline">
+          <p data-i18n="home.point2">Flexible scheduling. Our team is ready at short notice.</p>
+        </div>
+      </div>
+      <div class="horizontal-card">
+        <div class="card-icon">
+          <i class="fas fa-award"></i>
+        </div>
+        <div class="card-content">
+          <h3 data-i18n="home.point3_title">Experience</h3>
+          <hr class="title-uline">
+          <p data-i18n="home.point3">Qualified specialists. Benefit from years of hands-on experience.</p>
+        </div>
+      </div>
     </div>
   </div>
 </section>
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+  var whyNdnContent = document.getElementById('whyNdnContentEn');
+  if (whyNdnContent) {
+    whyNdnContent.style.marginTop = '112px';
+  }
+});
+</script>
 
 <section class="services-overview">
   <div class="container">
+    <h2 class="services-title">Our Services</h2>
     <div class="services-grid">
       <div class="service-item">
         <div class="service-icon">
@@ -128,56 +146,9 @@
   </div>
 </section>
 
-<!-- New "Why NDN Sanierung?" Section -->
-<section class="why-ndn-section">
-  <div class="container">
-    <div class="content-header">
-      <h2 class="why-ndn-title">
-        Why <span class="animated-underline">NDN Sanierung</span>?
-      </h2>
-    </div>
-    
-    <div class="why-ndn-content">
-      <div class="why-ndn-grid">
-        <div class="why-ndn-item reveal-item" style="--delay: 0.1s">
-          <div class="why-ndn-icon">
-            <i class="fas fa-shield-alt"></i>
-          </div>
-          <h3>Safety First</h3>
-          <p>All <span class="highlight-yellow">protective measures</span> according to TRGS 519 and state-of-the-art equipment for maximum safety.</p>
-        </div>
-        
-        <div class="why-ndn-item reveal-item" style="--delay: 0.2s">
-          <div class="why-ndn-icon">
-            <i class="fas fa-certificate"></i>
-          </div>
-          <h3>Certified Expertise</h3>
-          <p><span class="highlight-yellow">Qualified professionals</span> with years of experience in hazardous material remediation.</p>
-        </div>
-        
-        <div class="why-ndn-item reveal-item" style="--delay: 0.3s">
-          <div class="why-ndn-icon">
-            <i class="fas fa-clock"></i>
-          </div>
-          <h3>Punctual & Reliable</h3>
-          <p>From <span class="highlight-yellow">planning to handover</span> – punctual and professional.</p>
-        </div>
-        
-        <div class="why-ndn-item reveal-item" style="--delay: 0.4s">
-          <div class="why-ndn-icon">
-            <i class="fas fa-file-contract"></i>
-          </div>
-          <h3>Complete Documentation</h3>
-          <p>Comprehensive <span class="highlight-yellow">disposal certificates</span> and complete project documentation.</p>
-        </div>
-      </div>
-    </div>
-  </div>
-</section>
-
 <section class="container map-section">
   <div class="content-header">
-    <h2 data-i18n="home.map_title">Anfahrt & Karte</h2>
+    <h2>Find Us Here</h2>
     <hr class="title-uline">
   </div>
   <div class="map-wrap">
@@ -199,6 +170,7 @@
         <li><a data-i18n="nav.services" href="leistungen.html">Leistungen</a></li>
         <li><a data-i18n="nav.about" href="uber-uns.html">Über Uns</a></li>
         <li><a data-i18n="nav.contact" href="kontakt.html">Kontakt</a></li>
+  <li class="footer-lang-item"><a id="langToggle" href="../index.html" aria-label="Switch language">DE/EN</a></li>
       </ul>
     </div>
     <div>
@@ -216,7 +188,8 @@
     </div>
   </div>
   <div class="container rights" data-i18n="footer.rights">© 2024 NDN Sanierung. Alle Rechte vorbehalten.</div>
+  <p>Developed by Yondev.com.</p>
+  <script src="../src/js/main.js"></script>
 </footer>
-<script src="../src/js/main.js"></script>
 </body>
 </html>

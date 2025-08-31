@@ -1,10 +1,30 @@
-/* Hero main title and tagline styling after removing NDN Sanierung */
-.hero-main-title {
-  font-size: 1.45rem;
-  font-weight: 800;
-  color: #272727;
-  margin-bottom: 14px;
+/* Center and style the footer language toggle button */
+.footer-lang-btn-wrap {
+  display: flex;
+  justify-content: center;
+  margin-top: 0;
+  padding: 0;
+  list-style: none;
+}
+.footer-lang-item {
   text-align: center;
+  margin-top: 8px;
+}
+#langToggle {
+  display: inline;
+  color: #fff !important;
+  background: none !important;
+  border: none;
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  padding: 0;
+  transition: color 0.2s;
+}
+#langToggle:hover, #langToggle:focus {
+  color: #F8B600;
+  text-decoration: underline;
+  outline: none;
 }
 .hero-tagline-large {
   font-size: 1.08rem;
@@ -29,7 +49,7 @@
 }
 /* Extra space after Warum NDN title on homepage */
 .why-ndn-section .content-header {
-  margin-bottom: 60px !important;
+  margin-bottom: 20px !important;
 }
 .black-title-line {
   background: #272727 !important;
@@ -387,27 +407,27 @@ body {
 /* Language toggle button styles */
 #langToggle {
   font-weight: 600;
-  position: relative;
-  min-width: 50px;
-  font-size: 14px;
-  background: var(--tertiary);
-  color: #fff;
-  border: 2px solid var(--tertiary);
+  position: static;
+  min-width: unset;
+  font-size: 1rem;
+  background: none !important;
+  color: #272727;
+  border: none !important;
 }
 #langToggle:hover {
-  background: transparent;
-  color: var(--tertiary);
-  border-color: var(--tertiary);
+  background: none !important;
+  color: #F8B600;
+  border: none !important;
 }
 
 #langToggle.lang-de {
-  background: var(--tertiary);
-  color: #fff;
+  background: none !important;
+  color: #272727;
 }
 
 #langToggle.lang-en {
-  background: var(--tertiary);
-  color: #fff;
+  background: none !important;
+  color: #272727;
 }
 
 .mobile-nav { display: none; flex-direction: column; padding: 8px 4%; gap: 8px; border-bottom: 1px solid var(--border); }
@@ -1291,7 +1311,7 @@ html.light .cookie-banner .btn {
   font-weight: 600;
 }
 
-/* --- Why NDN Homepage Cards --- */
+/* --- Warum NDN Homepage Cards --- */
 .why-ndn-section .horizontal-card {
   opacity: 1;
   transform: translateX(0);
@@ -1299,7 +1319,7 @@ html.light .cookie-banner .btn {
     rgba(255, 255, 255, 0.95) 0%, 
     rgba(248, 248, 250, 0.9) 100%);
   border: 1px solid rgba(200, 210, 220, 0.3);
-  border-left: 4px solid #608B82;
+  border-left: 4px solid #F8B600;
   margin-bottom: 24px;
 }
 
@@ -1309,8 +1329,8 @@ html.light .cookie-banner .btn {
 }
 
 .why-ndn-section .card-icon {
-  background: #608B82;
-  color: #F8B600;
+  background: #F8B600;
+  color: #272727;
 }
 
 /* --- Section Headings --- */
@@ -2166,3 +2186,45 @@ html.light .page a:not(.btn) { text-decoration-color: rgba(0,0,0,.25); }
 .center-page .contact-form,
 .center-page .contact-form-wrap { margin: 0 auto; }
 .center-page ol { display: inline-block; text-align: left; }
+/* Why/Warum NDN Sanierung? spacing adjustments */
+.why-ndn-section .content-header {
+  padding-bottom: 0 !important;
+  margin-bottom: 0 !important;
+}
+.why-ndn-section .why-ndn-title {
+  margin-bottom: 0 !important;
+  padding-bottom: 0 !important;
+}
+.why-ndn-section .why-ndn-content {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
+}
+html[lang="de"] .why-ndn-section .content-header {
+  margin-bottom: 36px !important;
+}
+html[lang="de"] .why-ndn-content,
+html[lang="en"] .why-ndn-content {
+  margin-top: 72px !important;
+}
+.services-title {
+  display: block;
+  width: 100%;
+  text-align: center;
+  font-size: 2.6rem;
+  color: #fff;
+  font-weight: 800;
+  margin-bottom: 48px !important;
+  margin-top: 0;
+  border: none;
+  text-decoration: none !important;
+  position: relative;
+}
+.services-title::after {
+  content: "";
+  display: block;
+  margin: 24px auto 0 auto;
+  width: 320px;
+  height: 8px;
+  background: #fff;
+  border-radius: 4px;
+}
