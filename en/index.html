@@ -10,6 +10,7 @@
   <link rel="icon" type="image/svg+xml" href="../src/assets/images/favicon/favicon.svg">
   <link rel="manifest" href="../src/assets/images/favicon/site.webmanifest">
   <link rel="stylesheet" href="../src/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
   <script>
     (function(){
       try {
@@ -25,7 +26,7 @@
 <header class="app-header">
   <div class="container navbar">
     <a href="index.html" class="logo">
-  <img class="logo-img" src="../src/assets/images/NDNLongLogo.jpg" alt="NDN Logo">
+  <img class="logo-img" src="../src/assets/images/NDNOLogoTrans.png" alt="NDN Logo">
   <!-- Removed logo text -->
     </a>
     <nav class="desktop-nav">
@@ -49,24 +50,130 @@
 </header>
 <main class="page">
 
-<section class="hero header-hero">
-  <div class="container hero-inner">
-    <div class="hero-content">
-      <h1 style="font-size:3.6rem;margin-bottom:12px;">NDN Sanierung</h1>
-      <p style="line-height:1.4;margin-bottom:32px;">Certified asbestos and hazardous material remediation (TRGS 519). Safe. Fast. Professional.</p>
-    </div>
+<section class="dynamic-hero">
+  <div class="hero-background">
+    <div class="floating-shape shape-1"></div>
+    <div class="floating-shape shape-2"></div>
+    <div class="floating-shape shape-3"></div>
+    <div class="floating-shape shape-4"></div>
+    <div class="floating-shape shape-5"></div>
+    <div class="floating-shape shape-6"></div>
+    <div class="floating-shape shape-7"></div>
+    <div class="floating-shape shape-8"></div>
+  </div>
+  <div class="container hero-content">
+    <h1>NDN Sanierung</h1>
+    <p class="hero-tagline">
+      <span>Professional Asbestos & Hazardous Material Remediation</span>
+      <span>Certified • Safe • Reliable</span>
+    </p>
     <div class="hero-cta">
       <a class="btn primary" href="leistungen.html" data-i18n="home.cta_services">View Services</a>
-      <a class="btn secondary" href="kontakt.html" data-i18n="home.cta_contact">Contact Us</a>
+      <a class="btn secondary-outline" href="kontakt.html" data-i18n="home.cta_contact">Contact Us</a>
     </div>
   </div>
 </section>
+
 <section class="container features">
-  <div class="card"><h3>TRGS 519</h3><hr class="title-uline"><p data-i18n="home.point1">Asbestos remediation according to TRGS 519. We handle planning, execution and disposal.</p></div>
-  <div class="card"><h3 data-i18n="home.point2_title">Quick on Site</h3><hr class="title-uline"><p data-i18n="home.point2">Flexible scheduling. Our team is ready at short notice.</p></div>
-  <div class="card"><h3 data-i18n="home.point3_title">Experience</h3><hr class="title-uline"><p data-i18n="home.point3">Qualified specialists. Benefit from years of hands-on experience.</p></div>
+  <div class="horizontal-card">
+    <div class="card-icon">
+      <i class="fas fa-shield-alt"></i>
+    </div>
+    <div class="card-content">
+      <h3>TRGS 519</h3>
+      <hr class="title-uline">
+      <p data-i18n="home.point1">Asbestos remediation according to TRGS 519. We handle planning, execution and disposal.</p>
+    </div>
+  </div>
+  <div class="horizontal-card">
+    <div class="card-icon">
+      <i class="fas fa-clock"></i>
+    </div>
+    <div class="card-content">
+      <h3 data-i18n="home.point2_title">Quick on Site</h3>
+      <hr class="title-uline">
+      <p data-i18n="home.point2">Flexible scheduling. Our team is ready at short notice.</p>
+    </div>
+  </div>
+  <div class="horizontal-card">
+    <div class="card-icon">
+      <i class="fas fa-award"></i>
+    </div>
+    <div class="card-content">
+      <h3 data-i18n="home.point3_title">Experience</h3>
+      <hr class="title-uline">
+      <p data-i18n="home.point3">Qualified specialists. Benefit from years of hands-on experience.</p>
+    </div>
+  </div>
 </section>
 
+<section class="services-overview">
+  <div class="container">
+    <div class="services-grid">
+      <div class="service-item">
+        <div class="service-icon">
+          <i class="fas fa-hard-hat"></i>
+        </div>
+        <h3>Pollutant Remediation</h3>
+        <p>Professional removal of MMF, PCB, PAH and other hazardous substances according to current regulations.</p>
+      </div>
+      <div class="service-item">
+        <div class="service-icon">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <h3>Asbestos Remediation</h3>
+        <p>TRGS 519 certified asbestos remediation with low-dust methods and proper disposal.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- New "Why NDN Sanierung?" Section -->
+<section class="why-ndn-section">
+  <div class="container">
+    <div class="content-header">
+      <h2 class="why-ndn-title">
+        Why <span class="animated-underline">NDN Sanierung</span>?
+      </h2>
+    </div>
+    
+    <div class="why-ndn-content">
+      <div class="why-ndn-grid">
+        <div class="why-ndn-item reveal-item" style="--delay: 0.1s">
+          <div class="why-ndn-icon">
+            <i class="fas fa-shield-alt"></i>
+          </div>
+          <h3>Safety First</h3>
+          <p>All <span class="highlight-yellow">protective measures</span> according to TRGS 519 and state-of-the-art equipment for maximum safety.</p>
+        </div>
+        
+        <div class="why-ndn-item reveal-item" style="--delay: 0.2s">
+          <div class="why-ndn-icon">
+            <i class="fas fa-certificate"></i>
+          </div>
+          <h3>Certified Expertise</h3>
+          <p><span class="highlight-yellow">Qualified professionals</span> with years of experience in hazardous material remediation.</p>
+        </div>
+        
+        <div class="why-ndn-item reveal-item" style="--delay: 0.3s">
+          <div class="why-ndn-icon">
+            <i class="fas fa-clock"></i>
+          </div>
+          <h3>Punctual & Reliable</h3>
+          <p>From <span class="highlight-yellow">planning to handover</span> – punctual and professional.</p>
+        </div>
+        
+        <div class="why-ndn-item reveal-item" style="--delay: 0.4s">
+          <div class="why-ndn-icon">
+            <i class="fas fa-file-contract"></i>
+          </div>
+          <h3>Complete Documentation</h3>
+          <p>Comprehensive <span class="highlight-yellow">disposal certificates</span> and complete project documentation.</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
 
 <section class="container map-section">
   <div class="content-header">
