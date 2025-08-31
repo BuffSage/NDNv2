@@ -10,6 +10,7 @@
   <link rel="icon" type="image/svg+xml" href="../src/assets/images/favicon/favicon.svg">
   <link rel="manifest" href="../src/assets/images/favicon/site.webmanifest">
   <link rel="stylesheet" href="../src/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script>
     (function(){
       try {
@@ -25,101 +26,130 @@
 <header class="app-header">
   <div class="container navbar">
     <a href="index.html" class="logo">
-  <img class="logo-img" src="../src/assets/images/NDNLongLogo.jpg" alt="NDN Logo">
+  <img class="logo-img" src="../src/assets/images/NDNOLogoTrans.png" alt="NDN Logo">
   <!-- Removed logo text -->
     </a>
     <nav class="desktop-nav">
-      <a data-i18n="nav.services" href="leistungen.html">Leistungen</a>
-      <a data-i18n="nav.about" href="uber-uns.html">Über Uns</a>
-      <a data-i18n="nav.contact" href="kontakt.html">Kontakt</a>
+      <a data-i18n="nav.services" href="leistungen.html">Services</a>
+      <a data-i18n="nav.about" href="uber-uns.html">About Us</a>
+      <a data-i18n="nav.contact" href="kontakt.html">Contact</a>
     </nav>
     <div class="actions">
       <button id="langToggle" class="btn" aria-label="Switch to German">EN</button>
-  <!-- Theme toggle removed -->
-      <button class="menu-btn" id="menuBtn" aria-label="Menü">
+      <button class="menu-btn" id="menuBtn" aria-label="Menu">
         <span></span><span></span><span></span>
       </button>
     </div>
   </div>
   <nav class="mobile-nav" id="mobileNav">
-      <a data-i18n="nav.services" href="leistungen.html">Leistungen</a>
-      <a data-i18n="nav.about" href="uber-uns.html">Über Uns</a>
-      <a data-i18n="nav.contact" href="kontakt.html">Kontakt</a>
+      <a data-i18n="nav.services" href="leistungen.html">Services</a>
+      <a data-i18n="nav.about" href="uber-uns.html">About Us</a>
+      <a data-i18n="nav.contact" href="kontakt.html">Contact</a>
   </nav>
 </header>
 
 <main class="page center-page">
-  <section class="container">
+    <section class="container">
+        <!-- PAGE TITLE -->
+        <div class="content-header services-header">
+            <h1 class="services-title">Our Professional Services</h1>
+            <hr class="title-uline">
+        </div>
 
-      <!-- PAGE TITLE -->
-      <div class="content-header services-header">
-      <h1 class="services-title" data-i18n="leistungen.title">Unsere Fachleistungen im Detail</h1>
-      <hr class="title-uline">
-    </div>
+        <section class="services-cards-grid">
+            <!-- Service Card 1: Asbestos Remediation - Teal -->
+            <div class="service-card teal-card reveal">
+                <div class="service-icon-large">
+                    <i class="fas fa-hard-hat"></i>
+                </div>
+                <h2>Asbestos Remediation</h2>
+                <hr class="service-title-line yellow-line">
+                <p>Professional removal and disposal of asbestos-containing materials following all safety regulations and environmental standards.</p>
+                
+                <div class="service-features">
+                    <div class="feature-item">
+                        <i class="fas fa-shield-alt"></i>
+                        <span>Certified removal procedures</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-microscope"></i>
+                        <span>Laboratory analysis and testing</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-recycle"></i>
+                        <span>Environmentally compliant disposal</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-certificate"></i>
+                        <span>Complete documentation and certification</span>
+                    </div>
+                </div>
+                
+                <p class="service-outro">Safety is our top priority - we ensure complete protection for people and environment.</p>
+            </div>
 
-    <!-- ASBEST SECTION -->
-    <div class="service-section reveal">
-      <h2 data-i18n="leistungen.asbestos.title">Asbest Sanierung</h2>
-      <hr class="title-uline">
-      <p data-i18n="leistungen.asbestos.text">Asbest ist eine ernstzunehmende Gefahr für die Gesundheit. Wir sanieren fachgerecht und zertifiziert. Wir entfernen u.a.:</p>
-      <ul>
-        <li data-i18n="leistungen.asbestos.item1">Asbestzementplatten (Eternit) an Dächern und Fassaden</li>
-        <li data-i18n="leistungen.asbestos.item2">Asbesthaltige Rohre, Lüftungskanäle und Formteile</li>
-        <li data-i18n="leistungen.asbestos.item3">Floor-Flex-Platten und asbesthaltige Kleber</li>
-        <li data-i18n="leistungen.asbestos.item4">Brandschutzverkleidungen, Dichtmassen & Spritzasbest</li>
-      </ul>
-      <p data-i18n="leistungen.asbestos.outro">Wir arbeiten staubarm, sicher und nach Vorschrift – inklusive Entsorgung und Dokumentation.</p>
-    </div>
-
-    <!-- KMF / POLLUTANTS SECTION -->
-    <div class="service-section reveal" data-service="kmf">
-      <h2 data-i18n="leistungen.kmf.title">KMF &amp; Schadstoffe</h2>
-      <hr class="title-uline">
-      <p data-i18n="leistungen.kmf.text">
-        Künstliche Mineralfasern und weitere Schadstoffe erfordern fachgerechte Sanierung. Unser Expertenteam entfernt:
-      </p>
-      <ul>
-        <li data-i18n="leistungen.kmf.item1">KMF (Künstliche Mineralfasern) – Glaswolle, Steinwolle, Schlackenwolle</li>
-        <li data-i18n="leistungen.kmf.item2">PCB (Polychlorierte Biphenyle) in Fugenmassen und Anstrichen</li>
-        <li data-i18n="leistungen.kmf.item3">PAK (Polyzyklische aromatische Kohlenwasserstoffe) in Teerkleber</li>
-        <li data-i18n="leistungen.kmf.item4">Holzschutzmittel wie PCP, Lindan und DDT</li>
-      </ul>
-      <p data-i18n="leistungen.kmf.outro">
-        Alle Arbeiten erfolgen nach aktuellen Richtlinien mit entsprechender Schutzausrüstung und ordnungsgemäßer Entsorgung.
-      </p>
-    </div>
-
+            <!-- Service Card 2: Hazardous Material Remediation - Yellow -->
+            <div class="service-card yellow-card reveal">
+                <div class="service-icon-large">
+                    <i class="fas fa-exclamation-triangle"></i>
+                </div>
+                <h2>Hazardous Materials</h2>
+                <hr class="service-title-line white-line">
+                <p>Comprehensive handling of dangerous building materials including lead paint, PCBs, and other toxic substances.</p>
+                
+                <div class="service-features">
+                    <div class="feature-item">
+                        <i class="fas fa-search"></i>
+                        <span>Professional material identification</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-users-cog"></i>
+                        <span>Specialized trained personnel</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-truck"></i>
+                        <span>Secure transport and disposal</span>
+                    </div>
+                    <div class="feature-item">
+                        <i class="fas fa-file-contract"></i>
+                        <span>Regulatory compliance assurance</span>
+                    </div>
+                </div>
+                
+                <p class="service-outro">Experience and expertise for safe handling of all hazardous building materials.</p>
+            </div>
+        </section>
     </section>
 </main>
 
 <footer class="app-footer reveal">
   <div class="container footer-grid">
     <div>
-      <h4 data-i18n="footer.nav_title">Navigation</h4>
+      <h4>Navigation</h4>
       <ul>
-        <li><a data-i18n="nav.services" href="leistungen.html">Leistungen</a></li>
-        <li><a data-i18n="nav.about" href="uber-uns.html">Über Uns</a></li>
-        <li><a data-i18n="nav.contact" href="kontakt.html">Kontakt</a></li>
+        <li><a href="leistungen.html">Services</a></li>
+        <li><a href="uber-uns.html">About Us</a></li>
+        <li><a href="kontakt.html">Contact</a></li>
       </ul>
     </div>
     <div>
-      <h4 data-i18n="footer.contact_title">Kontakt</h4>
-      <p>Telefon: <a href="tel:+4915562360499">+49 155 62360499</a></p>
-      <p>E-Mail: <a href="mailto:info@ndn-sanierung.de">info@ndn-sanierung.de</a></p>
-      <p>Adresse: <span class="address">Endertstraße 31, 56812 Cochem</span></p>
+      <h4>Contact</h4>
+      <p>Phone: <a href="tel:+4915562360499">+49 155 62360499</a></p>
+      <p>Email: <a href="mailto:info@ndn-sanierung.de">info@ndn-sanierung.de</a></p>
+      <p>Address: <span class="address">Endertstraße 31, 56812 Cochem</span></p>
     </div>
     <div>
-      <h4 data-i18n="footer.legal_title">Rechtliches</h4>
+      <h4>Legal</h4>
       <ul>
-        <li><a data-i18n="footer.imprint" href="impressum.html">Impressum</a></li>
-        <li><a data-i18n="footer.privacy" href="datenschutz.html">Datenschutz</a></li>
+        <li><a href="impressum.html">Imprint</a></li>
+        <li><a href="datenschutz.html">Privacy Policy</a></li>
       </ul>
     </div>
   </div>
   <div class="container rights">
-    <div data-i18n="footer.rights">© 2025 NDN Sanierung. All rights reserved.</div>
+    <div>© 2025 NDN Sanierung. All rights reserved.</div>
     <div class="developer-credit">
-      <span data-i18n="footer.developed_by">Developed by</span> <a href="https://yondev.com" target="_blank" rel="noopener">Yondev.com</a>
+      <span>Developed by</span> <a href="https://yondev.com" target="_blank" rel="noopener">Yondev.com</a>
     </div>
   </div>
 </footer>

@@ -10,6 +10,7 @@
   <link rel="icon" type="image/svg+xml" href="src/assets/images/favicon/favicon.svg">
   <link rel="manifest" href="src/assets/images/favicon/site.webmanifest">
   <link rel="stylesheet" href="src/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
   <script>
     (function(){
       try {
@@ -25,7 +26,7 @@
 <header class="app-header">
   <div class="container navbar">
     <a href="index.html" class="logo">
-  <img class="logo-img" src="src/assets/images/NDNLongLogo.jpg" alt="NDN Logo">
+  <img class="logo-img" src="src/assets/images/NDNOLogoTrans.png" alt="NDN Logo">
   <!-- Removed logo text -->
     </a>
     <nav class="desktop-nav">
@@ -50,49 +51,80 @@
 
 <main class="page center-page">
   <section class="container">
-
     <!-- PAGE TITLE -->
     <div class="content-header services-header">
       <h1 class="services-title" data-i18n="leistungen.title">Unsere Fachleistungen im Detail</h1>
       <hr class="title-uline">
     </div>
 
-    <!-- ASBEST SECTION -->
-    <div class="service-section reveal" data-service="asbestos">
-      <h2 data-i18n="leistungen.asbestos.title">Asbestsanierung nach TRGS 519</h2>
-      <hr class="title-uline">
-      <p data-i18n="leistungen.asbestos.text">
-        Asbest ist eine ernstzunehmende Gefahr für die Gesundheit. Wir sanieren fachgerecht und zertifiziert. Wir entfernen u.a.:
-      </p>
-      <ul>
-        <li data-i18n="leistungen.asbestos.item1">Asbestzementplatten (Eternit) an Dächern und Fassaden</li>
-        <li data-i18n="leistungen.asbestos.item2">Asbesthaltige Rohre, Lüftungskanäle und Formteile</li>
-        <li data-i18n="leistungen.asbestos.item3">Floor-Flex-Platten und asbesthaltige Kleber</li>
-        <li data-i18n="leistungen.asbestos.item4">Brandschutzverkleidungen, Dichtmassen & Spritzasbest</li>
-      </ul>
-      <p data-i18n="leistungen.asbestos.outro">
-        Wir arbeiten staubarm, sicher und nach Vorschrift – inklusive Entsorgung und Dokumentation.
-      </p>
-    </div>
+    <!-- SERVICES OVERVIEW CARDS -->
+    <div class="services-cards-grid">
+      <!-- ASBESTSANIERUNG CARD -->
+      <div class="service-card teal-card reveal">
+        <div class="service-icon-large">
+          <i class="fas fa-hard-hat"></i>
+        </div>
+        <h2 data-i18n="leistungen.asbestos.title">Asbestsanierung nach TRGS 519</h2>
+        <hr class="service-title-line yellow-line">
+        <p data-i18n="leistungen.asbestos.text">
+          Asbest ist eine ernstzunehmende Gefahr für die Gesundheit. Wir sanieren fachgerecht und zertifiziert. Wir entfernen u.a.:
+        </p>
+        <div class="service-features">
+          <div class="feature-item">
+            <i class="fas fa-home"></i>
+            <span data-i18n="leistungen.asbestos.item1">Asbestzementplatten (Eternit) an Dächern und Fassaden</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-tools"></i>
+            <span data-i18n="leistungen.asbestos.item2">Asbesthaltige Rohre, Lüftungskanäle und Formteile</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-layer-group"></i>
+            <span data-i18n="leistungen.asbestos.item3">Floor-Flex-Platten und asbesthaltige Kleber</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-shield-alt"></i>
+            <span data-i18n="leistungen.asbestos.item4">Brandschutzverkleidungen, Dichtmassen & Spritzasbest</span>
+          </div>
+        </div>
+        <p class="service-outro" data-i18n="leistungen.asbestos.outro">
+          Wir arbeiten staubarm, sicher und nach Vorschrift – inklusive Entsorgung und Dokumentation.
+        </p>
+      </div>
 
-    <!-- KMF / POLLUTANTS SECTION -->
-    <div class="service-section reveal" data-service="kmf">
-      <h2 data-i18n="leistungen.kmf.title">KMF &amp; Schadstoffe</h2>
-      <hr class="title-uline">
-      <p data-i18n="leistungen.kmf.text">
-        Künstliche Mineralfasern und weitere Schadstoffe erfordern fachgerechte Sanierung. Unser Expertenteam entfernt:
-      </p>
-      <ul>
-        <li data-i18n="leistungen.kmf.item1">KMF (Künstliche Mineralfasern) – Glaswolle, Steinwolle, Schlackenwolle</li>
-        <li data-i18n="leistungen.kmf.item2">PCB (Polychlorierte Biphenyle) in Fugenmassen und Anstrichen</li>
-        <li data-i18n="leistungen.kmf.item3">PAK (Polyzyklische aromatische Kohlenwasserstoffe) in Teerkleber</li>
-        <li data-i18n="leistungen.kmf.item4">Holzschutzmittel wie PCP, Lindan und DDT</li>
-      </ul>
-      <p data-i18n="leistungen.kmf.outro">
-        Alle Arbeiten erfolgen nach aktuellen Richtlinien mit entsprechender Schutzausrüstung und ordnungsgemäßer Entsorgung.
-      </p>
+      <!-- KMF & SCHADSTOFFE CARD -->
+      <div class="service-card yellow-card reveal">
+        <div class="service-icon-large">
+          <i class="fas fa-exclamation-triangle"></i>
+        </div>
+        <h2 data-i18n="leistungen.kmf.title">KMF &amp; Schadstoffe</h2>
+        <hr class="service-title-line white-line">
+        <p data-i18n="leistungen.kmf.text">
+          Künstliche Mineralfasern und weitere Schadstoffe erfordern fachgerechte Sanierung. Unser Expertenteam entfernt:
+        </p>
+        <div class="service-features">
+          <div class="feature-item">
+            <i class="fas fa-microscope"></i>
+            <span data-i18n="leistungen.kmf.item1">KMF (Künstliche Mineralfasern) – Glaswolle, Steinwolle, Schlackenwolle</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-vial"></i>
+            <span data-i18n="leistungen.kmf.item2">PCB (Polychlorierte Biphenyle) in Fugenmassen und Anstrichen</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-flask"></i>
+            <span data-i18n="leistungen.kmf.item3">PAK (Polyzyklische aromatische Kohlenwasserstoffe) in Teerkleber</span>
+          </div>
+          <div class="feature-item">
+            <i class="fas fa-tree"></i>
+            <span data-i18n="leistungen.kmf.item4">Holzschutzmittel wie PCP, Lindan und DDT</span>
+          </div>
+        </div>
+        <p class="service-outro" data-i18n="leistungen.kmf.outro">
+          Alle Arbeiten erfolgen nach aktuellen Richtlinien mit entsprechender Schutzausrüstung und ordnungsgemäßer Entsorgung.
+        </p>
+      </div>
     </div>
-
   </section>
 </main>
 

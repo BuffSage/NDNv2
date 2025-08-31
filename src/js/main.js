@@ -17,6 +17,9 @@
         developed_by: 'Entwickelt von Yondev.com',
       },
       home: {
+        hero_title: 'NDN Sanierung',
+        hero_tagline_1: 'Professionelle Asbest- und Schadstoffsanierung',
+        hero_tagline_2: 'Zertifiziert • Sicher • Zuverlässig',
         tagline:
           'Asbest- und Schadstoffsanierung mit Zertifizierung (TRGS 519). Sicher. Schnell. Fachgerecht.',
         cta_services: 'Zu den Leistungen',
@@ -32,7 +35,7 @@
         title: 'Unsere Fachleistungen im Detail',
         asbestos: {
           title: 'Asbestsanierung nach TRGS 519',
-          text: 'Asbest ist eine ernstzunehmende Gefahr für die Gesundheit. Wir sanieren fachgerecht und zertifiziert. Wir entfernen u.a.:',
+          text: 'Asbest ist eine ernstzunehmende Gefahr für die Gesundheit.<br>Wir sanieren fachgerecht und zertifiziert u.a.:',
           item1: 'Asbestzementplatten (Eternit) an Dächern und Fassaden',
           item2: 'Asbesthaltige Rohre, Lüftungskanäle und Formteile',
           item3: 'Floor-Flex-Platten und asbesthaltige Kleber',
@@ -42,7 +45,7 @@
         },
         kmf: {
           title: 'KMF & Schadstoffe',
-          text: 'Künstliche Mineralfasern und weitere Schadstoffe erfordern fachgerechte Sanierung. Unser Expertenteam entfernt:',
+          text: 'Künstliche Mineralfasern und weitere Schadstoffe erfordern fachgerechte Sanierung.<br>Unser Expertenteam entfernt:',
           item1: 'KMF (Künstliche Mineralfasern) – Glaswolle, Steinwolle, Schlackenwolle',
           item2: 'PCB (Polychlorierte Biphenyle) in Fugenmassen und Anstrichen',
           item3: 'PAK (Polyzyklische aromatische Kohlenwasserstoffe) in Teerkleber',
@@ -89,6 +92,9 @@
         developed_by: 'Developed by Yondev.com',
       },
       home: {
+        hero_title: 'NDN Sanierung',
+        hero_tagline_1: 'Professional Asbestos & Hazardous Material Remediation',
+        hero_tagline_2: 'Certified • Safe • Reliable',
         tagline:
           'Certified asbestos and hazardous material remediation (TRGS 519). Safe. Fast. Professional.',
         cta_services: 'View Services',
@@ -104,7 +110,7 @@
         title: 'Our Professional Services in Detail',
         asbestos: {
           title: 'Asbestos Remediation (TRGS 519)',
-          text: 'Asbestos is a serious health hazard. We remediate professionally and to code. We remove e.g.:',
+          text: 'Asbestos is a serious health hazard.<br>We remediate professionally and certified including:',
           item1: 'Asbestos cement panels (Eternit) on roofs and facades',
           item2: 'Asbestos-containing pipes, ducts and fittings',
           item3: 'Floor-flex tiles and asbestos adhesives',
@@ -114,7 +120,7 @@
         },
         kmf: {
           title: 'MMF & Pollutants',
-          text: 'Mineral wool fibers and other pollutants require professional remediation. Our expert team removes:',
+          text: 'Mineral wool fibers and other pollutants require professional remediation.<br>Our expert team removes:',
           item1: 'MMF (Mineral wool fibers) – Glass wool, rock wool, slag wool',
           item2: 'PCB (Polychlorinated biphenyls) in sealants and coatings',
           item3: 'PAH (Polycyclic aromatic hydrocarbons) in tar adhesives',
@@ -217,7 +223,7 @@
     $$('[data-i18n]').forEach((node) => {
       const key = node.getAttribute('data-i18n');
       const val = getByPath(dict, key);
-      if (typeof val === 'string') node.textContent = val;
+      if (typeof val === 'string') node.innerHTML = val;
     });
     updateFooterRights(lang);
     
@@ -460,8 +466,11 @@
     }
 
     function initCardAnimations() {
-      const cards = $$('.features .card');
-      if (!cards.length) return;
+      const cards = $$('.features .horizontal-card');
+      const serviceItems = $$('.services-overview .service-item');
+      
+      if (!cards.length && !serviceItems.length) return;
+      
       const io = new IntersectionObserver(
         (entries) => {
           entries.forEach((entry) => {
@@ -472,9 +481,17 @@
         },
         { threshold: 0.2 }
       );
+      
       cards.forEach((card, i) => {
-        card.style.setProperty('--slide-from', i % 2 === 0 ? '-40px' : '40px');
-        io.observe(card);
+        setTimeout(() => {
+          io.observe(card);
+        }, i * 100); // Stagger the animations
+      });
+      
+      serviceItems.forEach((item, i) => {
+        setTimeout(() => {
+          io.observe(item);
+        }, i * 200); // Stagger the animations
       });
     }
 
