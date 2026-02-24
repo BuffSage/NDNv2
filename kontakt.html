@@ -65,12 +65,12 @@
     </p>
     <p><strong>E-Mail:</strong>
       <!-- TODO: replace with exact email -->
-      <a href="mailto:info@ndn-sanierung.de">info@ndn-sanierung.de</a>
+      <a href="mailto:info@ndnsanierung.de">info@ndnsanierung.de</a>
     </p>
 
     <div class="contact-form-wrap">
-      <!-- Formspree wired exactly as requested -->
-      <form class="contact-form" action="https://formspree.io/f/xgvzqjew" method="POST">
+      <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+        <input type="hidden" name="access_key" value="da5b2dc1-fb9b-4f87-bc2a-53f458803f3c">
         <label>
           <span data-i18n="contact.name">Name</span>
           <input type="text" name="name" required autocomplete="name">
@@ -83,10 +83,6 @@
           <span data-i18n="contact.message">Nachricht</span>
           <textarea name="message" rows="6" required></textarea>
         </label>
-
-        <!-- Optional: subject + honeypot -->
-        <input type="hidden" name="_subject" value="Neue Nachricht über ndn-sanierung.de">
-        <input type="text" name="_gotcha" style="display:none">
 
         <button class="btn primary" type="submit" data-i18n="contact.submit">Senden</button>
       </form>

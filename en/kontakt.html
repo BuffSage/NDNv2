@@ -57,11 +57,12 @@
   <p>E-Mail: <a href="mailto:info@ndn-sanierung.de">info@ndn-sanierung.de</a></p>
   <p>Telefon: <a href="tel:+4915562360499">+49 155 62360499</a></p>
   <div class="contact-form-wrap">
-  <form class="contact-form" onsubmit="return false;">
-    <label><span data-i18n="contact.name">Name</span><input type="text" required></label>
-    <label><span data-i18n="contact.email">E-Mail</span><input type="email" required></label>
-    <label><span data-i18n="contact.message">Nachricht</span><textarea rows="6" required></textarea></label>
-    <button class="btn primary" data-i18n="contact.submit">Senden</button>
+  <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+    <input type="hidden" name="access_key" value="da5b2dc1-fb9b-4f87-bc2a-53f458803f3c">
+    <label><span data-i18n="contact.name">Name</span><input type="text" name="name" required autocomplete="name"></label>
+    <label><span data-i18n="contact.email">E-Mail</span><input type="email" name="email" required autocomplete="email"></label>
+    <label><span data-i18n="contact.message">Nachricht</span><textarea name="message" rows="6" required></textarea></label>
+    <button class="btn primary" type="submit" data-i18n="contact.submit">Senden</button>
   </form>
 </div>
 </section>
