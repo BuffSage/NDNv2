@@ -3,13 +3,13 @@
   "short_name": "NDN",
   "icons": [
     {
-      "src": "/ndnsanierung.de/src/assets/images/favicon/web-app-manifest-192x192.png",
+      "src": "/ndn-sanierung.de/src/assets/images/favicon/web-app-manifest-192x192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "maskable"
     },
     {
-      "src": "/ndnsanierung.de/src/assets/images/favicon/web-app-manifest-512x512.png",
+      "src": "/ndn-sanierung.de/src/assets/images/favicon/web-app-manifest-512x512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "maskable"
